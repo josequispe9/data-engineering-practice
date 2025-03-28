@@ -1,11 +1,15 @@
 version: "3.9"
+
 services:
   test:
+    build: .  # Se asegura de construir la imagen antes de usarla
     image: "exercise-2"
     volumes:
       - .:/app
     command: python3 -m pytest
+
   run:
+    build: .  # Se asegura de construir la imagen antes de usarla
     image: "exercise-2"
     volumes:
       - .:/app
